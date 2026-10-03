@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>2-Sahifa 🚀</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background:
+        radial-gradient(circle at 20% 20%, #7b2cff55, transparent 35%),
+        radial-gradient(circle at 80% 80%, #ff00aa44, transparent 35%),
+        #090014;
+
+    overflow: hidden;
+}
+
+/* YULDUZLAR */
+
+body::before {
+    content: "";
+    position: fixed;
+    width: 3px;
+    height: 3px;
+    background: white;
+    box-shadow:
+        50px 80px white,
+        120px 200px white,
+        200px 100px white,
+        300px 300px white,
+        400px 150px white,
+        500px 80px white,
+        600px 250px white,
+        700px 100px white,
+        800px 300px white,
+        900px 150px white,
+        1000px 80px white,
+        1100px 250px white,
+        1200px 100px white;
+    animation: yulduz 4s infinite alternate;
+}
+
+@keyframes yulduz {
+    from {
+        opacity: 0.3;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* SOAT */
+
+#soat {
+    position: fixed;
+    top: 25px;
+    right: 30px;
+
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    text-shadow:
+        0 0 8px white,
+        0 0 20px white;
+
+    z-index: 100;
+}
+
+/* ASOSIY BOX */
+
+.box {
+    width: 90%;
+    max-width: 600px;
+
+    padding: 45px 30px;
+
+    text-align: center;
+
+    background: rgba(255,255,255,0.08);
+
+    border: 1px solid rgba(255,255,255,0.2);
+
+    border-radius: 25px;
+
+    backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 0 30px rgba(150,0,255,0.4),
+        inset 0 0 20px rgba(255,255,255,0.05);
+
+    animation: boxAnim 1s ease;
+}
+
+@keyframes boxAnim {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* SARLAVHA */
+
+h1 {
+    font-size: 45px;
+    margin-bottom: 15px;
+
+    background: linear-gradient(
+        90deg,
+        #ff00cc,
+        #7b2cff,
+        #00eaff
+    );
+
+    -webkit-background-clip: text;
+    color: transparent;
+
+    animation: rang 3s infinite alternate;
+}
+
+@keyframes rang {
+    from {
+        filter: brightness(1);
+    }
+
+    to {
+        filter: brightness(1.7);
+    }
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 25px;
+    color: #ddd;
+}
+
+/* TUGMALAR */
+
+button {
+    border: none;
+
+    padding: 13px 20px;
+
+    margin: 6px;
+
+    border-radius: 15px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    color: white;
+
+    background: linear-gradient(
+        135deg,
+        #7b2cff,
+        #ff00aa
+    );
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    box-shadow:
+        0 0 15px rgba(255,0,200,0.4);
+}
+
+button:hover {
+    transform: translateY(-4px) scale(1.05);
+
+    box-shadow:
+        0 0 25px rgba(255,0,200,0.8);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* O'YIN */
+
+#oyin {
+    display: none;
+
+    margin-top: 25px;
+
+    padding: 20px;
+
+    border-radius: 18px;
+
+    background: rgba(0,0,0,0.3);
+
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+#oyin h2 {
+    margin-bottom: 10px;
+}
+
+#son {
+    margin-top: 15px;
+
+    font-size: 20px;
+
+    font-weight: bold;
+}
+
+/* EMOJILAR */
+
+.emoji {
+    position: fixed;
+
+    font-size: 30px;
+
+    pointer-events: none;
+
+    animation: uch 2s linear forwards;
+
+    z-index: 999;
+}
+
+@keyframes uch {
+
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-300px) rotate(360deg);
+        opacity: 0;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- SOAT -->
+
+<div id="soat">00:00:00</div>
+
+
+<!-- ASOSIY QISM -->
+
+<div class="box">
+
+    <h1>🚀 Mening Saytim</h1>
+
+    <p>
+        Bu mening chiroyli 2-sahifam 😎🔥
+    </p>
+
+
+    <button onclick="emojiYogdir()">
+        🎉 Bos meni
+    </button>
+
+
+    <button onclick="rangniOzgartir()">
+        🌈 Rang
+    </button>
+
+
+    <button onclick="rejim()">
+        🌙 Dark
+    </button>
+
+
+    <button onclick="oyinOch()">
+        🎮 O‘yin
+    </button>
+
+
+    <!-- O'YIN -->
+
+    <div id="oyin">
+
+        <h2>🎮 Sirli sonni top!</h2>
+
+        <p>
+            1 dan 10 gacha son o‘ylangan.
+        </p>
+
+        <button onclick="taxminQil()">
+            🔮 Taxmin qil
+        </button>
+
+        <div id="son"></div>
+
+    </div>
+
+</div>
+
+
+<script>
+
+/* =========================
+   SOAT
+========================= */
+
+function soatniKorsat() {
+
+    let hozir = new Date();
+
+    let soat = String(
+        hozir.getHours()
+    ).padStart(2, "0");
+
+    let daqiqa = String(
+        hozir.getMinutes()
+    ).padStart(2, "0");
+
+    let sekund = String(
+        hozir.getSeconds()
+    ).padStart(2, "0");
+
+    document.getElementById("soat").textContent =
+        soat + ":" + daqiqa + ":" + sekund;
+}
+
+soatniKorsat();
+
+setInterval(
+    soatniKorsat,
+    1000
+);
+
+
+/* =========================
+   SIRLI SON
+========================= */
+
+let sirliSon = 9;
+
+
+/* =========================
+   O'YINNI OCHISH
+========================= */
+
+function oyinOch() {
+
+    let oyin =
+        document.getElementById("oyin");
+
+    if (oyin.style.display === "block") {
+
+        oyin.style.display = "none";
+
+    } else {
+
+        oyin.style.display = "block";
+
+        /* HAR DOIM 9 */
+
+        sirliSon = 9;
+    }
+}
+
+
+/* =========================
+   TAXMIN QILISH
+========================= */
+
+function taxminQil() {
+
+    let taxmin = prompt(
+        "1 dan 10 gacha son yoz:"
+    );
+
+    if (taxmin == sirliSon) {
+
+        document.getElementById("son").textContent =
+            "🎉 TOPDING! 🏆🔥";
+
+        emojiYogdir();
+
+    } else {
+
+        document.getElementById("son").textContent =
+            "❌ Xato! Yana urinib ko‘r!";
+
+    }
+}
+
+
+/* =========================
+   EMOJILAR
+========================= */
+
+function emojiYogdir() {
+
+    let emojilar = [
+        "🔥",
+        "🚀",
+        "🎉",
+        "⭐",
+        "💜",
+        "😎",
+        "✨"
+    ];
+
+    for (
+        let i = 0;
+        i < 15;
+        i++
+    ) {
+
+        let emoji =
+            document.createElement("div");
+
+        emoji.className = "emoji";
+
+        emoji.textContent =
+            emojilar[
+                Math.floor(
+                    Math.random() *
+                    emojilar.length
+                )
+            ];
+
+        emoji.style.left =
+            Math.random() * 100 + "vw";
+
+        emoji.style.top =
+            (70 + Math.random() * 30) + "vh";
+
+        document.body.appendChild(emoji);
+
+        setTimeout(() => {
+
+            emoji.remove();
+
+        }, 2000);
+    }
+}
+
+
+/* =========================
+   RANGNI O'ZGARTIRISH
+========================= */
+
+function rangniOzgartir() {
+
+    let ranglar = [
+        "#090014",
+        "#00152b",
+        "#20001f",
+        "#001f1b",
+        "#18002b"
+    ];
+
+    let random =
+        Math.floor(
+            Math.random() *
+            ranglar.length
+        );
+
+    document.body.style.background =
+        ranglar[random];
+}
+
+
+/* =========================
+   DARK REJIM
+========================= */
+
+function rejim() {
+
+    document.body.style.background =
+        "black";
+
+}
+
+</script>
+
+</body>
+</html>
